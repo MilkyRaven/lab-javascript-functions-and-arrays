@@ -175,7 +175,38 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+let matrixChiquita = [
+  [1, 2, 2, 3, 2, 1],
+  [1, 2, 1, 0, 2, 1],
+  [1, 2, 1, 2, 2, 1],
+  [2, 2, 2, 2, 2, 1],
+  [1, 0, 0, 1, 0, 1],
+
+]
+
+function greatestProduct(matrix) {
+  let max = 0; 
+  let result;
+  for (let i = 0; i < matrix.length; i++){
+    for (let j = 0; j < matrix.length; j++) {
+        if ((j - 3) >= 0){
+          result = matrix[i][j] * matrix[i][j-1] * matrix[i][j-2] * matrix[i][j-3];
+          if (result > max) {
+          max = result;
+          }
+        }
+        if ((i - 3) >= 0) {
+        result= matrix[i][j] * matrix[i-1][j] * matrix[i-2][j] * matrix[i-3][j];
+        if (result > max) {
+        max = result;
+          }
+      }
+    }
+  }
+  return max;
+} 
+
+console.log(greatestProduct(matrixChiquita))
 
 
 
