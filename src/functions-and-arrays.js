@@ -175,14 +175,13 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-let matrixChiquita = [
-  [1, 2, 2, 3, 2, 1],
-  [1, 2, 1, 0, 2, 1],
-  [1, 2, 1, 2, 2, 1],
-  [2, 2, 2, 2, 2, 1],
-  [1, 0, 0, 1, 0, 1],
-
-]
+// -- prueba -- let matrixChiquita = [
+//   [1, 2, 2, 3, 2, 1],
+//   [1, 2, 1, 0, 2, 1],
+//   [1, 2, 1, 2, 2, 1],
+//   [2, 2, 2, 2, 2, 1],
+//   [1, 0, 0, 1, 0, 1],
+// ]
 
 function greatestProduct(matrix) {
   let max = 0; 
@@ -206,7 +205,7 @@ function greatestProduct(matrix) {
   return max;
 } 
 
-console.log(greatestProduct(matrixChiquita))
+console.log(greatestProduct(matrix))
 
 
 
